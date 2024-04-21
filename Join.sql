@@ -237,15 +237,15 @@ select * from proveedores;
 
 drop table productos;
 create table if not exists productos(
-id int unsigned not null auto_increment,
-nombre varchar(50) not null,
-descripcion text,
-proveedorid int unsigned not null,
-precio decimal(5,2),
-cantidad smallint unsigned default 0,
-primary key(id),
-unique index (nombre),
-foreign key(proveedorid) references proveedor(id)
+    id int unsigned not null auto_increment,
+    nombre varchar(50) not null,
+    descripcion text,
+    proveedorid int unsigned not null,
+    precio decimal(5,2),
+    cantidad smallint unsigned default 0,
+    primary key(id),
+    unique index (nombre),
+    foreign key(proveedorid) references proveedor(id)
 );
 describe productos;
 
